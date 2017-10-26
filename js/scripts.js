@@ -27,10 +27,12 @@ var toEncrypt = function(input){
       console.log(rowF);
       console.log(rowG);
       console.log(rowH);
-
+      var masterRow = [[rowA], [rowB], [rowC], [rowD], [rowE], [rowF], [rowG], [rowH]]
       // encryptedMessage += input[i];
       // input -= columns[i];
-    }
+    } console.log((rowA[0]).concat(rowB[0]).concat(rowC[0]).concat(rowD[0]).concat(rowE[0]));
+    console.log((rowF[0]).concat(rowG[0]).concat(rowH[0]).concat(rowA[1]).concat(rowB[1]));
+    console.log((rowC[1]).concat(rowD[1]).concat(rowE[1]).concat(rowF[1]).concat(rowG[1]));
   }
 // }
 
