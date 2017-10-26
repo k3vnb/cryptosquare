@@ -1,11 +1,38 @@
 var toEncrypt = function(input){
+  var encryptedMessage = "";
   var stringLength = input.length
   var columns = Math.ceil(Math.sqrt(stringLength));
   var rows = Math.round(Math.sqrt(stringLength));
   var square = (columns * rows);
-  alert("columns" + columns);
-  alert("rows" + rows);
-}
+  // alert("columns" + columns);
+  // alert("rows" + rows);
+
+
+  // for (var i = 0; i < input.length; i++){
+    // while
+    if (input.length >= columns) {
+      var rowA = input.slice(0, columns);
+      var rowB = input.splice(columns, columns);
+      var rowC = input.splice(columns, columns);
+      var rowD = input.splice(columns, columns);
+      var rowE = input.splice(columns, columns);
+      var rowF = input.splice(columns, columns);
+      var rowG = input.splice(columns, columns);
+      var rowH = input.splice(columns, columns);
+      console.log(rowA);
+      console.log(rowB);
+      console.log(rowC);
+      console.log(rowD);
+      console.log(rowE);
+      console.log(rowF);
+      console.log(rowG);
+      console.log(rowH);
+
+      // encryptedMessage += input[i];
+      // input -= columns[i];
+    }
+  }
+// }
 
 // Front End
 $(document).ready(function() {
@@ -16,7 +43,7 @@ $(document).ready(function() {
     var lowerCaseInput = userInput.toLowerCase().replace(re, '');
     var lcSplit = lowerCaseInput.split("");
     var encryptedMessage = toEncrypt(lcSplit);
-    // $("#result").append("<li>" + lcSplit + "</li>");
+    $("#result").append("<li>" + encryptedMessage + "</li>");
 
   });
 });
